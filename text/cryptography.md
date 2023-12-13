@@ -1,4 +1,4 @@
-# Cryptography in BaseLink
+# Cryptography in BaseNote
 
 ```
 load @termsurf/bolt/code/base/cryptography/md5

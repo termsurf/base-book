@@ -1,4 +1,4 @@
-# Package Manager Internals in BaseLink
+# Package Manager Internals in BaseNote
 
 This is the package manager section basically, the first prototype
 implemented in TypeScript. The goal is to eventually have it built using
@@ -163,19 +163,19 @@ the upload to google cloud, it generates the hash and saves the
 
 ```js
 // open file stream
-var fstream = fs.createReadStream('./test/hmac.js')
-var hash = crypto.createHash('sha512', key)
-hash.setEncoding('hex')
+var fstream = fs.createReadStream("./test/hmac.js");
+var hash = crypto.createHash("sha512", key);
+hash.setEncoding("hex");
 
 // once the stream is done, we read the values
-fstream.on('end', () => {
-  hash.end()
+fstream.on("end", () => {
+  hash.end();
   // print result
-  console.log(hash.read())
-})
+  console.log(hash.read());
+});
 
 // pipe file to hash generator
-fstream.pipe(hash)
+fstream.pipe(hash);
 ```
 
 The lockfile then loads the data:
@@ -268,9 +268,9 @@ When you add new dependencies, it runs a new vercel build. Otherwise it
 runs against the vercel code.
 
 ```
-BaseLinkShow (project name)
+BaseNoteShow (project name)
 
-MakeBaseLink (project name)
+MakeBaseNote (project name)
 
 make.base.link/@termsurf/buck-1234
   Shows the rendering
@@ -305,20 +305,20 @@ You can only create 20 decks per day, unless you upgrade to verified.
 Get word like `bird-1234`
 
 ```js
-const MAX = 2097151
+const MAX = 2097151;
 
 function splitInt(int) {
   if (int > MAX) {
-    throw new Error('Too large a number')
+    throw new Error("Too large a number");
   }
-  let roughly10k = (int >> 8) & 0xffff
-  let terms256 = int & 0xff
-  return [terms256, roughly10k]
+  let roughly10k = (int >> 8) & 0xffff;
+  let terms256 = int & 0xff;
+  return [terms256, roughly10k];
 }
 
 function log(int) {
-  const [a, b] = splitInt(int)
-  console.log(int, '=> [', a, b, ']')
+  const [a, b] = splitInt(int);
+  console.log(int, "=> [", a, b, "]");
 }
 ```
 
@@ -636,7 +636,7 @@ You could periodically check and clean the cache, every 16th change,
 otherwise use file watching.
 
 ```js
-hash([file, name].join('#'))
+hash([file, name].join("#"));
 ```
 
 There is an in-memory cache of the modules. It saves the modules
@@ -682,14 +682,14 @@ through JS.
 
 ```js
 // foo.js
-import * as circularStuff from './hash+<hash>.js'
+import * as circularStuff from "./hash+<hash>.js";
 
-export const foo = circularStuff.foo
+export const foo = circularStuff.foo;
 
 // bar.js
-import * as circularStuff from './hash+<hash>.js'
+import * as circularStuff from "./hash+<hash>.js";
 
-export const bar = circularStuff.bar
+export const bar = circularStuff.bar;
 ```
 
 ## Max File Size
@@ -697,79 +697,79 @@ export const bar = circularStuff.bar
 The max link file size is 16mb.
 
 ```js
-import crypto from 'node:crypto'
-import * as fs from 'node:fs/promises'
-import pkg from 'glob'
-const { glob } = pkg
+import crypto from "node:crypto";
+import * as fs from "node:fs/promises";
+import pkg from "glob";
+const { glob } = pkg;
 
-const MB_16 = Math.pow(2, 24)
-const MB_1 = MB_16 / 16
+const MB_16 = Math.pow(2, 24);
+const MB_1 = MB_16 / 16;
 
-const fileSharedBuffer = Buffer.alloc(MB_1)
+const fileSharedBuffer = Buffer.alloc(MB_1);
 
 async function readBytes(fh, sharedBuffer) {
-  return await fh.read(sharedBuffer, 0, sharedBuffer.length, null)
+  return await fh.read(sharedBuffer, 0, sharedBuffer.length, null);
 }
 
-const start = new Date()
+const start = new Date();
 
-const str = []
+const str = [];
 
 main().then(() => {
-  const end = new Date()
-  console.log(end - start)
-})
+  const end = new Date();
+  console.log(end - start);
+});
 
 async function main() {
-  const paths = glob.sync('../bolt.link/code/**/*.link')
+  const paths = glob.sync("../bolt.link/code/**/*.link");
   for (const path of paths) {
-    const hash = await getFileHash(path)
-    str.push(hash)
+    const hash = await getFileHash(path);
+    str.push(hash);
   }
 }
 
 async function getFileHash(link) {
-  const hash = crypto.createHash('sha512')
-  hash.setEncoding('hex')
+  const hash = crypto.createHash("sha512");
+  hash.setEncoding("hex");
 
   for await (const chunk of generateChunksFromFile(
     link,
     MB_1,
-    fileSharedBuffer,
+    fileSharedBuffer
   )) {
-    hash.update(chunk)
+    hash.update(chunk);
   }
 
-  hash.end()
-  return hash.read()
+  hash.end();
+  return hash.read();
 }
 
 async function* generateChunksFromFile(filePath, size, sharedBuffer) {
-  const stats = await fs.stat(filePath) // file details
+  const stats = await fs.stat(filePath); // file details
 
   if (stats.size > MB_16) {
-    throw new Error(`File too big: ${stats.size} > ${MB_16}`)
+    throw new Error(`File too big: ${stats.size} > ${MB_16}`);
   }
 
-  const fh = await fs.open(filePath) // file descriptor
-  let bytesRead = 0 // how many bytes were read
-  let end = size
-  let n = Math.ceil(stats.size / size)
+  const fh = await fs.open(filePath); // file descriptor
+  let bytesRead = 0; // how many bytes were read
+  let end = size;
+  let n = Math.ceil(stats.size / size);
 
   for (let i = 0; i < n; i++) {
-    await readBytes(fh, sharedBuffer)
-    bytesRead = (i + 1) * size
+    await readBytes(fh, sharedBuffer);
+    bytesRead = (i + 1) * size;
     if (bytesRead > stats.size) {
       // When we reach the end of file,
       // we have to calculate how many bytes were actually read
-      end = size - (bytesRead - stats.size)
-      yield sharedBuffer.slice(0, end)
+      end = size - (bytesRead - stats.size);
+      yield sharedBuffer.slice(0, end);
     } else {
-      yield sharedBuffer
+      yield sharedBuffer;
     }
   }
 
-  await fh.close()
+  await fh.close();
 }
 ```
 

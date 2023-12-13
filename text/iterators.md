@@ -1,4 +1,4 @@
-# Iterators in BaseLink
+# Iterators in BaseNote
 
 Rust defines an iterator like this:
 

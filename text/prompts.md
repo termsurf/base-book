@@ -1,4 +1,4 @@
-# ChatGPT Prompts in BaseLink
+# ChatGPT Prompts in BaseNote
 
 Here is some code for a programming language we are calling "link"
 

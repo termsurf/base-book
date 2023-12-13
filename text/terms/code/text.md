@@ -1,4 +1,4 @@
-# The `text` in BaseLink `code`
+# The `text` in BaseNote `code`
 
 ```
 text <foo>

@@ -1,4 +1,4 @@
-# The `need` in BaseLink `code`
+# The `need` in BaseNote `code`
 
 This is for imports from external native libraries, like Swift libraries
 or Node.js modules.

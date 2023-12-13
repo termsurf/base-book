@@ -1,4 +1,4 @@
-# CLIs in BaseLink
+# CLIs in BaseNote
 
 ```
 hook make

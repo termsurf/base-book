@@ -1,6 +1,6 @@
-# Introduction to BaseLink
+# Introduction to BaseNote
 
-BaseLink is the programming environment for LinkText, a minimal data
+BaseNote is the programming environment for LinkText, a minimal data
 modeling language. It is a statically typed, imperative, object oriented
 language which (at some point in the future) will compile down to JS,
 Swift, Rust, and Kotlin, to cover the main environments where the code
@@ -62,9 +62,9 @@ There are a few goals for making this language:
 
 ## Drawbacks
 
-Some of the drawbacks to BaseLink are:
+Some of the drawbacks to BaseNote are:
 
-1. **Verbosity**. For much of data modeling, BaseLink is quite consise
+1. **Verbosity**. For much of data modeling, BaseNote is quite consise
    (such as writing classes). But for writing programs and the
    implementations of functions, because it doesn't have all the short
    operators and requires extra keywords, it is not as concise in this

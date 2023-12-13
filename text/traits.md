@@ -1,4 +1,4 @@
-# Traits in BaseLink
+# Traits in BaseNote
 
 In Rust we have:
 

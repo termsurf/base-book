@@ -1,4 +1,4 @@
-# The `walk` in BaseLink
+# The `walk` in BaseNote
 
 A walk works on an "iterator". Anything that is an iterator can be used
 in the walk.

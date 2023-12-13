@@ -1,4 +1,4 @@
-# The `deck` file in BaseLink
+# The `deck` file in BaseNote
 
 A deck is a package, and this is how you define the package metadata.
 

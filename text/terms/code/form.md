@@ -1,4 +1,4 @@
-# The `form` in BaseLink
+# The `form` in BaseNote
 
 A `form` is a class or type or struct, like you would find across many
 types of programming languages. It can have properties and

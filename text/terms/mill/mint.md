@@ -1,4 +1,4 @@
-## The `mint` in BaseLink
+## The `mint` in BaseNote
 
 Here's an example:
 

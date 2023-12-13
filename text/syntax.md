@@ -1,8 +1,8 @@
-# The Syntax of BaseLink
+# The Syntax of BaseNote
 
 ## Overview
 
-BaseLink uses LinkText for its syntax. LinkText is a little more than a
+BaseNote uses LinkText for its syntax. LinkText is a little more than a
 markup language, tending toward a programming language. It is a way to
 model information and computation in an easy to read and write format,
 suitable for hierarchical note taking and other means of capturing data
@@ -329,17 +329,17 @@ Link Tree, the AST for LinkText. This is the exact structure of the AST.
 
 ```ts
 export type LinkFold = {
-  base?: Leaf
-  head?: Leaf
-}
+  base?: Leaf;
+  head?: Leaf;
+};
 
 export type LinkTree = {
-  nest: LinkFork
-  form: LinkName.Tree
-}
+  nest: LinkFork;
+  form: LinkName.Tree;
+};
 
 export type LinkFork = {
-  fold?: LinkFold
+  fold?: LinkFold;
   nest: Array<
     | LinkText
     | LinkFork
@@ -351,67 +351,67 @@ export type LinkFork = {
     | LinkComb
     | LinkCode
     | LinkKnit
-  >
-  base?: LinkFork | LinkNick | LinkCull
-  form: LinkName.Fork
-}
+  >;
+  base?: LinkFork | LinkNick | LinkCull;
+  form: LinkName.Fork;
+};
 
 export type LinkComb = {
-  form: LinkName.Comb
-  bond: number
-  base?: LinkCull | LinkFork
-  leaf: Leaf
-}
+  form: LinkName.Comb;
+  bond: number;
+  base?: LinkCull | LinkFork;
+  leaf: Leaf;
+};
 
 export type LinkCode = {
-  bond: number
-  mold: string
-  base?: LinkCull | LinkFork
-  form: LinkName.Code
-  leaf: Leaf
-}
+  bond: number;
+  mold: string;
+  base?: LinkCull | LinkFork;
+  form: LinkName.Code;
+  leaf: Leaf;
+};
 
 export type LinkCull = {
-  nest?: LinkFork | LinkSize | LinkKnit
-  base?: LinkKnit
-  form: LinkName.Cull
-  fold?: LinkFold
-}
+  nest?: LinkFork | LinkSize | LinkKnit;
+  base?: LinkKnit;
+  form: LinkName.Cull;
+  fold?: LinkFold;
+};
 
 export type LinkKnit = {
-  base?: LinkFork
-  nest: Array<LinkCull | LinkNick | LinkCord>
-  form: LinkName.Knit
-  fold?: LinkFold
-}
+  base?: LinkFork;
+  nest: Array<LinkCull | LinkNick | LinkCord>;
+  form: LinkName.Knit;
+  fold?: LinkFold;
+};
 
 export type LinkNick = {
-  nest?: LinkFork
-  base?: LinkKnit | LinkText
-  size: number
-  form: LinkName.Nick
-  fold?: LinkFold
-}
+  nest?: LinkFork;
+  base?: LinkKnit | LinkText;
+  size: number;
+  form: LinkName.Nick;
+  fold?: LinkFold;
+};
 
 export type LinkCord = {
-  form: LinkName.Cord
-  base?: LinkText
-  leaf: Leaf
-}
+  form: LinkName.Cord;
+  base?: LinkText;
+  leaf: Leaf;
+};
 
 export type LinkText = {
-  nest: Array<LinkCord | LinkNick>
-  form: LinkName.Text
-  base?: LinkCull | LinkFork
-  fold?: LinkFold
-}
+  nest: Array<LinkCord | LinkNick>;
+  form: LinkName.Text;
+  base?: LinkCull | LinkFork;
+  fold?: LinkFold;
+};
 
 export type LinkSize = {
-  form: LinkName.Size
-  bond: number
-  base?: LinkCull | LinkFork
-  leaf: Leaf
-}
+  form: LinkName.Size;
+  bond: number;
+  base?: LinkCull | LinkFork;
+  leaf: Leaf;
+};
 ```
 
 You'll notice, each element has a reference back to it's parent, for

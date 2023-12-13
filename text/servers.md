@@ -1,4 +1,4 @@
-# Defining a Server in BaseLink
+# Defining a Server in BaseNote
 
 ```
 load @termsurf/nest

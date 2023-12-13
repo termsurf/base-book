@@ -1,9 +1,9 @@
-# Working with Files in BaseLink
+# Working with Files in BaseNote
 
-BaseLink provides comprehensive functionality for working with files in
+BaseNote provides comprehensive functionality for working with files in
 your applications. Files play a crucial role in data storage,
 processing, and interaction with the underlying system. Let's explore
-the various operations you can perform with files using BaseLink.
+the various operations you can perform with files using BaseNote.
 
 ### Creating a File
 
@@ -95,10 +95,10 @@ This code loads the `@termsurf/bolt/code/folder` module, executes the
 folder. This creates a new directory with the provided name in the
 current working directory.
 
-By leveraging these file-related features in BaseLink, you can
+By leveraging these file-related features in BaseNote, you can
 effectively manage file operations, such as creating, reading,
 streaming, and organizing files and directories within your
 applications. Whether you need to store data, process files
-sequentially, or manipulate file system structures, BaseLink provides
+sequentially, or manipulate file system structures, BaseNote provides
 the necessary tools to handle file-related tasks efficiently and
 reliably.

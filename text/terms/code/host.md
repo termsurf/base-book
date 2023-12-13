@@ -1,4 +1,4 @@
-# The `host` in BaseLink `code`
+# The `host` in BaseNote `code`
 
 Hosts are basically namespaces or bindings to values. Basically they are
 defining constants.

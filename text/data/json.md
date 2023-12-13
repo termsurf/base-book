@@ -1,4 +1,4 @@
-# JSON in BaseLink
+# JSON in BaseNote
 
 ```
 load @termsurf/moon/json

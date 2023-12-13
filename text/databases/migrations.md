@@ -1,4 +1,4 @@
-# Database Migrations in BaseLink
+# Database Migrations in BaseNote
 
 - https://github.com/ankane/strong_migrations
 

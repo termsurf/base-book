@@ -1,4 +1,4 @@
-# The `mine` in BaseLink
+# The `mine` in BaseNote
 
 ## Parsing Bytes with `mine`
 
@@ -144,7 +144,7 @@ mine back
 ## Parsing LinkText with `mine`
 
 The `mill` DSL is for parsing LinkText, the tree of terms you see in the
-BaseLink environment. It is divided into a `mine` layer, which emits
+BaseNote environment. It is divided into a `mine` layer, which emits
 things it finds in the tree based on certain patterns you define, and
 the `mint`, which takes what is emitted from the mine and converts it
 into AST objects. So you just:

@@ -1,4 +1,4 @@
-# UI Components in BaseLink
+# UI Components in BaseNote
 
 ```
 zone home-footer-section

@@ -1,4 +1,4 @@
-# The `meet` in BaseLink
+# The `meet` in BaseNote
 
 ### `meet and`
 

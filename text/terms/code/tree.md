@@ -1,4 +1,4 @@
-# The `tree` in BaseLink `code`
+# The `tree` in BaseNote `code`
 
 This is for compile-time code generation, and possibly runtime code
 generation if you generate a tree on the fly.

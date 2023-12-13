@@ -1,4 +1,4 @@
-# Scope in BaseLink
+# Scope in BaseNote
 
 A card has access to these variables within its scope:
 

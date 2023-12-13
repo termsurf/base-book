@@ -1,4 +1,4 @@
-# Folder Structure in BaseLink
+# Folder Structure in BaseNote
 
 The "index" file for a folder is called `base.link` (you'll notice many
 of those in the repo already). This is how we name it, like `index.js`.

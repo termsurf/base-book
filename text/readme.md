@@ -1,4 +1,4 @@
-# The BaseLink Book
+# The BaseNote Book
 
 - [Foreword](foreword.md)
 - [Introduction](introduction.md)

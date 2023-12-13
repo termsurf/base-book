@@ -1,4 +1,4 @@
-# Tests in BaseLink
+# Tests in BaseNote
 
 ```
 test <I'm a test>

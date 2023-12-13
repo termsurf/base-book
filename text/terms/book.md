@@ -1,4 +1,4 @@
-# The `book` file in BaseLink
+# The `book` file in BaseNote
 
 ```
 head [number], text [title]

@@ -1,4 +1,4 @@
-# Parsing Bytes in BaseLink
+# Parsing Bytes in BaseNote
 
 ## How parsing works
 

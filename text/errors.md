@@ -1,4 +1,4 @@
-# Error Definition and Handling in BaseLink
+# Error Definition and Handling in BaseNote
 
 First, in some library, you define your error:
 

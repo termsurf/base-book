@@ -1,4 +1,4 @@
-# The `line` file in BaseLink
+# The `line` file in BaseNote
 
 ```
 # file named foo.link

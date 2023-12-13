@@ -1,24 +1,24 @@
-# Main Libraries in BaseLink
+# Main Libraries in BaseNote
 
-These are open source building blocks used to make up the BaseLink
-framework. Calling BaseLink a framework is kind of a misnomer, it is
+These are open source building blocks used to make up the BaseNote
+framework. Calling BaseNote a framework is kind of a misnomer, it is
 basically the minimal set of conventions for building packages.
 
-1. `@termsurf/bind`: The BaseLink Environment Binding Library
-1. `@termsurf/bolt`: The BaseLink Data Type Library
-1. `@termsurf/moon`: The BaseLink Environment Tooling Library
-1. `@termsurf/hare`: The BaseLink Data Structure Library
-1. `@termsurf/worm`: The BaseLink Content Grammar Library
-1. `@termsurf/mesh`: The BaseLink Compiler Library
-1. `@termsurf/fish`: The BaseLink Linting Library
-1. `@termsurf/wolf`: The BaseLink File Manipulation Library
-1. `@termsurf/star`: The BaseLink Third-Party Integration Library
-1. `@termsurf/crow`: The BaseLink Drawing Library
-1. `@termsurf/nest`: The BaseLink Resource Provisioning Library
-1. `@termsurf/snow`: The BaseLink Querying Library
-1. `@termsurf/door`: The BaseLink Permission Library
-1. `@termsurf/seed`: The BaseLink Math Library
-1. `@termsurf/tree`: The BaseLink DSL Library
+1. `@termsurf/bind`: The BaseNote Environment Binding Library
+1. `@termsurf/bolt`: The BaseNote Data Type Library
+1. `@termsurf/moon`: The BaseNote Environment Tooling Library
+1. `@termsurf/hare`: The BaseNote Data Structure Library
+1. `@termsurf/worm`: The BaseNote Content Grammar Library
+1. `@termsurf/mesh`: The BaseNote Compiler Library
+1. `@termsurf/fish`: The BaseNote Linting Library
+1. `@termsurf/wolf`: The BaseNote File Manipulation Library
+1. `@termsurf/star`: The BaseNote Third-Party Integration Library
+1. `@termsurf/crow`: The BaseNote Drawing Library
+1. `@termsurf/nest`: The BaseNote Resource Provisioning Library
+1. `@termsurf/snow`: The BaseNote Querying Library
+1. `@termsurf/door`: The BaseNote Permission Library
+1. `@termsurf/seed`: The BaseNote Math Library
+1. `@termsurf/tree`: The BaseNote DSL Library
 
 ## `@termsurf/bind`
 
@@ -78,7 +78,7 @@ This is for parsing and writing text and/or bytes.
 
 ## `@termsurf/mesh`
 
-This is the main BaseLink compiler. It takes input text and compiles it
+This is the main BaseNote compiler. It takes input text and compiles it
 to a mesh, then runs typechecking / typeinference on it and everything,
 and outputs builds for target environments.
 

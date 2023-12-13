@@ -1,4 +1,4 @@
-# The `risk` in BaseLink `code`
+# The `risk` in BaseNote `code`
 
 The risk statement, like unsafe in rust.
 

@@ -1,6 +1,6 @@
-# Graphics in BaseLink
+# Graphics in BaseNote
 
-Here is a hello world graphics rendering in BaseLink.
+Here is a hello world graphics rendering in BaseNote.
 
 ```
 load @termsurf/crow
