@@ -8,7 +8,7 @@
 
 <h3 align='center'>@textsurf/base-book</h3>
 <p align='center'>
-  The BaseNote documentation
+  The documentation for BaseNote
 </p>
 
 <br/>
