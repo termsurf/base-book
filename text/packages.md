@@ -101,8 +101,8 @@ it is just built into the compiler, the specific ways different file
 types are handled.
 
 ```
-https://base.note/@termsurf/base/head/deck.note
-https://base.note/@termsurf/base/1.2.3/deck.note
+https://base.surf/@termsurf/base/head/deck.note
+https://base.surf/@termsurf/base/1.2.3/deck.note
 ```
 
 Limit to 256mb decks.
@@ -131,8 +131,8 @@ base host deck
 Stored on google cloud like:
 
 ```
-deck.base.note/@termsurf/base/1.2.3/base.tar.gz
-deck.base.note/@termsurf/base/1.2.3/base.note
+deck.base.surf/@termsurf/base/1.2.3/base.tar.gz
+deck.base.surf/@termsurf/base/1.2.3/base.note
 ```
 
 The `base.note` gives us the metadata associated with the deck:
@@ -202,7 +202,7 @@ link <@termsurf/wolf:0.0.1>
 The website is pinged:
 
 ```
-PATCH https://base.note/deck
+PATCH https://base.surf/deck
 ```
 
 With the payload:
@@ -218,7 +218,7 @@ It stores a copy of the package readme.md and the deck file metadata for
 display in the UI.
 
 ```
-https://base.note/@termsurf/base
+https://base.surf/@termsurf/base
 ```
 
 Shows readme, with link to source.
@@ -238,7 +238,7 @@ For each version, it stores the readme and the metadata on the site in
 postgres, to render the website.
 
 ```
-https://base.note/@termsurf/base/1.2.3
+https://base.surf/@termsurf/base/1.2.3
 ```
 
 The registry chooses to not use URLs and instead use the `@` at sign to
@@ -252,10 +252,10 @@ The sandbox is basically a deck.
 https://codepen.io/ettrics/pen/WRbGRN
 
 ```
-base.note/@termsurf/:deck/code/:file+
-base.note/@termsurf/buck-1212 (4 letter word followed by numbers)
-base.note/@termsurf/buck-1212/mark/:mark/code/:file+ (just the code)
-base.note/@termsurf/buck-1212/mark/:mark/hint/:file+/task/create-something
+base.surf/@termsurf/:deck/code/:file+
+base.surf/@termsurf/buck-1212 (4 letter word followed by numbers)
+base.surf/@termsurf/buck-1212/mark/:mark/code/:file+ (just the code)
+base.surf/@termsurf/buck-1212/mark/:mark/hint/:file+/task/create-something
 ```
 
 Then the sandbox decks are marked as "sort make".
@@ -272,13 +272,13 @@ BaseNoteShow (project name)
 
 MakeBaseNote (project name)
 
-make.base.note/@termsurf/buck-1234
+make.base.surf/@termsurf/buck-1234
   Shows the rendering
-make.base.note/@termsurf/buck-1234/hint/:file+
-make.base.note/@termsurf/buck-1234/code/:file+
+make.base.surf/@termsurf/buck-1234/hint/:file+
+make.base.surf/@termsurf/buck-1234/code/:file+
 make.base.note
   Try and share code
-base.note/dock/vercel/back
+base.surf/dock/vercel/back
 ```
 
 Those are `sort make` decks under the hood, or `make true`.
