@@ -37,7 +37,7 @@ tool google
   bind region, loan region
 ```
 
-This is how the values would be saved in a sort of `seed.link` file.
+This is how the values would be saved in a sort of `seed.note` file.
 
 ```
 base <1.2.3>
@@ -77,9 +77,9 @@ different elements and syntax used:
 
 ### Saving the Values
 
-The values can be saved in a separate `seed.link` file, following a
+The values can be saved in a separate `seed.note` file, following a
 similar syntax to the artifact definitions. The `base` statement at the
-beginning sets the version or base for the `seed.link` file.
+beginning sets the version or base for the `seed.note` file.
 
 ### Remote Storage with the Moon Framework
 

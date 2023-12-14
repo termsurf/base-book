@@ -1,7 +1,7 @@
 # The `line` file in BaseNote
 
 ```
-# file named foo.link
+# file named foo.note
 hook bar
   take help
     take <-h>
